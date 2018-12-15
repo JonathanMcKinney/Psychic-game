@@ -8,13 +8,22 @@
 </head>
 <body>
     <h1>Psychic Game</h1>
-    <p>What letter am I thinking</p>
+    <p>What letter am I thinking?</p>
     <p>Wins: <span id="win">0</span></p>
     <p>Losses: <span id="loss">0</span></p>
     <p>Guesses Remaining: <span id="guessLeft"></span></p>
     <p>Letters Guessed: <span id="letter"></span></p>
 
     <script>
+
+    /* Create an array of all letters,
+        upon initiation, a random letter is chosen from the array and set as the objective,
+        user presses a key, if key is a letter it is compared to the objective,
+        {if the key matches the objective the user wins, and wins++
+        if the key doesn't match, the letter is stored in "letters guessed" and the "guesses remaining" decreases by one,}
+        the above continues until the user wins or "guesses remaining" = 0
+        if "guesses remaining" = 0, losses++ */
+
         var option = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
         var winCount = document.getElementById("win");
@@ -22,8 +31,19 @@
         var guessCounter = document.getElementById("guessLeft");
         var letterDisplay = document.getElementById("letter");
 
-        var win = 0
-        var loss = 0
+        var win = 0;
+        var loss = 0;
+        var guessLeft = 10;
+        var letter = [];
+
+        var objective = option[Math.floor(Math.random() * option.length)];
+
+        document.onkeyup = function (event) {
+
+            var userGuess = event.key;
+            return userGuess;
+            
+        }
 
 
     </script>
