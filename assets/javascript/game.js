@@ -16,7 +16,9 @@ function createObjective() {
 createObjective();
 
 document.onkeyup = function (event) {
-
+/*keystroke will cipher through option array to verify key is lowercase letter.  
+ if it is a lowercase letter it will run the code;
+ if letter has already been guessed it will not register another guess */
 
     letter.push(event.key);
     letterDisplay.textContent = letter;
@@ -42,5 +44,3 @@ document.onkeyup = function (event) {
         }
     }
 }
-
-
