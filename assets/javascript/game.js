@@ -30,6 +30,7 @@ document.onkeyup = function (event) {
         if (guess === objective) {
             win++;
             winCount.textContent = win;
+            alert("You've won!")
             restart();
         }
         else {
@@ -41,6 +42,7 @@ document.onkeyup = function (event) {
                 if (guessLeft === 0) {
                     loss++;
                     lossCount.textContent = loss;
+                    alert('Sorry, try again!')
                     restart();
                 }
             }
